@@ -1,0 +1,74 @@
+\documentclass[10pt]{article}
+    \usepackage[spanish]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[margin=1in]{geometry}          
+    \usepackage{graphicx}
+    \usepackage{amsthm, amsmath, amssymb}
+    \usepackage{mathtools}
+    \usepackage{setspace}\onehalfspacing
+    \usepackage[loose,nice]{units} 
+    \usepackage{enumitem}
+    \usepackage{hyperref}
+    \hypersetup{
+        colorlinks,
+        citecolor=black,
+        filecolor=black,
+        linkcolor=black,
+        urlcolor=black
+    }
+    
+    
+    \title{Números suma de dos cuadrados y ecuaciones diofantinas}
+    \author{Nicholas Mc-Donnell, Camilo Sanchez}
+    \date{2do semestre 2017}
+
+    \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+    \renewcommand{\vec}[1]{\mathbf{#1}}
+    \newcommand{\set}[1]{\mathbb{#1}}
+    \newcommand{\func}[5]{#1:#2\xrightarrow[#5]{#4}#3}
+    \newcommand{\contr}{\rightarrow\leftarrow}
+    
+    \DeclareMathOperator{\Ima}{Im}
+    
+    \newtheorem{thm}{Teorema}[section]
+    \newtheorem{lem}[thm]{Lem
+    \newtheorem{prop}[thm]{Proposición}
+    \newtheorem*{cor}{Corolario}
+    
+    \theoremstyle{definition}
+    \newtheorem{defn}{Definición}[section]
+    \newtheorem{obs}{Observación}[section]
+    \newtheorem{ejm}[thm]{Ejemplo:}
+    
+    \pagenumbering{arabic}
+
+    \begin{document}
+        \maketitle
+        \abstract{Comenzaremos dando algunos ejemplos de ecuaciones diofantinas de la forma $x^2+y^2=p$, para después analizar cuales ecuaciones de la forma $x^2+y^2=n$ tienen solución. Después de esto, analizaremos unos pocos ejemplos de ecuaciones de las formas $x^2-p=y^n$ y $x^2+ny^2=p$, con sus respectivas soluciones.}
+
+        \section{Números suma de cuadrados}
+        \thm{Un número natural $n$ se puede representar como una suma de dos cuadrados si y solo si todo factor primo de la forma $p=4m+3$ aparece con un exponente par en la factorización prima de $n$}
+        \lem{Para los primos $p=4m+1$ la ecuación $s^2\equiv -1\mod p$ tiene dos soluciones $s\in\{1,2,...,p-1\}$, para $p=2$ hay una solución, mientras que para $p=4m+3$ no hay soluciones.}
+        \lem{Ningun numero de la forma $n=4m+3$ es la suma de dos cuadrados}
+        \lem{Todo primo de la forma $p=4m+1$ es la suma de dos cuadrados, en otras palabras, se puede escribir como $p=x^2+y^2$ con $x,y\in\set{N}$}
+
+        \section{Ejemplos}
+        \subsection{$x^2-2y^2=2,x^2+2y^2=2$}
+        \defn{Norma:}
+        Función $N$ de un anillo $R$ a $\set{Z}$, que cumple las siguientes propiedades:
+        \[a,b\in R\]
+        \begin{enumerate}
+            \item $N(ab)=N(a)N(b)$
+
+            \item $a\mid b\implies N(a)\mid N(b)$
+
+            \item $a$ unidad $\implies N(a)=1$
+        \end{enumerate}
+        Norma típica de $\set{Z}[\sqrt{x}]$ con $x\in \set{Z},\sqrt{x}\notin\set{Z}$:
+        \[a+b\sqrt{x}\in\set{Z}[\sqrt{x}],N(a+b\sqrt{x})=a^2-xb^2\]
+        \subsection{$x^2-p=y^4$}
+        \[x^2-17=y^4\]
+        \[x^2-19=y^4\]
+        \[x^2-p=y^4\]
+        
+\end{document}
